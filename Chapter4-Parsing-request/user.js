@@ -1,9 +1,6 @@
-const http = require('http');
 const fs = require('fs');
 
-const PORT = 3000;
-
-const server = http.createServer((req,res) => {
+const userRequestHandler = (req,res) => {
     if(req.url === '/'){
         res.setHeader('Content-Type','text/html');
         res.write('<html>');
@@ -48,6 +45,8 @@ const server = http.createServer((req,res) => {
             const bodyObject = Object.fromEntries(params);
             console.log(bodyObject);
             //{ username: 'Rushi Hase', gender: 'male' }
+            
+            fs.writeFileSync('user-details.txt',JSON.stringify(bodyObject));
         });
         fs.writeFileSync('user-details.txt','Mansi Hase');
         res.statusCode = 302 //redirect
@@ -59,8 +58,6 @@ const server = http.createServer((req,res) => {
     res.write('<body><h1>Welcome My Learning Journey</h1></body>');
     res.write('</html>');
     return res.end();
-});
+};
 
-server.listen(PORT,() => {
-    console.log(`server is running on http://localhost:${PORT}`);
-});
+module.exports = userRequestHandler;
