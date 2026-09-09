@@ -1,3 +1,12 @@
+/*Create a page that shows a navigation bar of Myntra with the following links
+A. Home
+B. Men
+C. Women
+D. Kids
+E. Cart
+clicking on each link page should navigate to that page and a welcome to section text is shown there*/
+
+
 const http = require('http');
 
 const PORT = 3001;
