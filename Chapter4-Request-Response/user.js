@@ -27,7 +27,7 @@ const server = http.createServer((req,res) => {
     }
     else if(req.url.toLocaleLowerCase() === "/submit-details" && req.method == "POST"){
         fs.writeFileSync('user-details.txt','Mansi Hase');
-        res.statusCode = 302 //redirect
+        res.statusCode = 302 //redirect request
         res.setHeader('Location','/');
     }
     res.setHeader('Content-Type','text/html');
