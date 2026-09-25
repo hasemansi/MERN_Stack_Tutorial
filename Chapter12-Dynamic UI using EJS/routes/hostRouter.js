@@ -16,9 +16,13 @@ hostRouter.get('/add-home', (req,res) => {
     res.sendFile(path.join(rootDir, 'views', 'addHome.html'));
 });
 
+const registeredHomes = [];
+
 hostRouter.post('/add-home', (req, res) => {
-    console.log("In POST /add-home Middleware ", req.path, req.method, req.body);
-   res.sendFile(path.join(rootDir, 'views', 'homeAdded.html'));
+    console.log("In POST /add-home Middleware ", req.path, req.method, req.body.homeName);
+    registeredHomes.push({ houseName: req.body.homeName });
+    res.sendFile(path.join(rootDir, 'views', 'homeAdded.html'));
 });
 
-module.exports = hostRouter;
+exports.hostRouter = hostRouter;
+exports.registeredHomes = registeredHomes;

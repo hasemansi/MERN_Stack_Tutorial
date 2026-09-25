@@ -8,22 +8,31 @@
     <link rel="stylesheet" href="/css/output.css">
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<body class="bg-gray-100 min-h-screen">
 
-    <div class="bg-white p-10 rounded-lg shadow-md text-center">
+    <header class="bg-white shadow-sm border-b border-red-200">
+        <nav class="max-w-4xl mx-auto flex justify-center gap-8 py-4 text-red-500 font-semibold">
+            <a href="/" class="px-4 py-2 rounded-md hover:bg-red-50">Home</a>
+            <a href="/host/add-home" class="px-4 py-2 rounded-md hover:bg-red-50">Add Home</a>
+        </nav>
+    </header>
 
-        <h1 class="text-3xl font-bold text-green-600 mb-6">
-            Your Home Registered Successfully..!!!
-        </h1>
+    <main class="flex items-center justify-center min-h-[80vh] px-4">
+        <div class="bg-white p-10 rounded-lg shadow-md text-center w-full max-w-xl">
 
-        <a
-            href="/"
-            class="inline-block bg-red-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-red-600"
-        >
-            Go Back
-        </a>
+            <h1 class="text-3xl font-bold text-green-600 mb-6">
+                Your Home Registered Successfully..!!!
+            </h1>
 
-    </div>
+            <a
+                href="/"
+                class="inline-block bg-red-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-red-600"
+            >
+                Go Back
+            </a>
+
+        </div>
+    </main>
 
 </body>
 </html>

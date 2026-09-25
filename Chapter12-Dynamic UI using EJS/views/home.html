@@ -10,67 +10,21 @@
 
 <body class="bg-gray-100 min-h-screen">
 
-    <!-- Header -->
-    <header class="bg-white shadow-md">
-
-        <nav class="max-w-7xl mx-auto px-6">
-
-            <ul class="w-full flex items-center justify-between py-4">
-
-                <!-- Logo -->
-                <li>
-                    <a 
-                        href="/"
-                        class="text-3xl font-bold text-red-500"
-                    >
-                        Airbnb
-                    </a>
-                </li>
-
-                <!-- Navigation Links -->
-                <li class="flex items-center gap-8">
-
-                    <a
-                        href="/"
-                        class="text-gray-700 font-medium hover:text-red-500"
-                    >
-                        Home
-                    </a>
-
-                    <a
-                        href="/host/add-home"
-                        class="text-gray-700 font-medium hover:text-red-500"
-                    >
-                        Add Home
-                    </a>
-
-                </li>
-
-            </ul>
-
+    <header class="bg-white shadow-sm border-b border-red-200">
+        <nav class="max-w-4xl mx-auto flex justify-center gap-8 py-4 text-red-500 font-semibold">
+            <a href="/" class="px-4 py-2 rounded-md hover:bg-red-50">Home</a>
+            <a href="/host/add-home" class="px-4 py-2 rounded-md hover:bg-red-50">Add Home</a>
         </nav>
-
     </header>
 
+    <main class="flex items-center justify-center min-h-[80vh] px-4">
+        <div class="bg-white p-10 rounded-lg shadow-md text-center w-full max-w-xl">
 
-    <!-- Main Content -->
-    <main class="min-h-[calc(100vh-73px)] flex items-center justify-center px-4">
-
-        <div class="bg-white w-full max-w-lg p-10 rounded-xl shadow-lg text-center">
-
-            <h1 class="text-4xl font-bold text-red-500 mb-8">
-                Welcome to Airbnb
-            </h1>
-
-            <a
-                href="/host/add-home"
-                class="inline-block bg-red-500 text-white px-7 py-3 rounded-lg font-semibold hover:bg-red-600 transition"
-            >
-                Add Home
-            </a>
+            <h2 class="text-4xl font-bold text-red-500 mb-6">
+                Here are our Registered Homes
+            </h2>
 
         </div>
-
     </main>
 
 </body>
